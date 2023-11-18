@@ -6,7 +6,7 @@ Bem-vindo ao repositório RubyLearning! Este repositório é destinado a ajudar 
 
 <br>
 
-## [01. Arrays em Ruby](https://github.com/brenonsc/RubyLearning/tree/main/01.%20Array%20%26%20Reverse)
+## [01. Arrays](https://github.com/brenonsc/RubyLearning/tree/main/01.%20Array%20%26%20Reverse)
 
 ### Declaração de Arrays
 
@@ -54,7 +54,7 @@ Lembre-se de que o uso do `reverse!` altera o array original. Se preferir criar 
 
 <br>
 
-## [02. Formas de Imprimir Valores em Ruby](https://github.com/brenonsc/RubyLearning/tree/main/02.%20Printing)
+## [02. Formas de Imprimir Valores](https://github.com/brenonsc/RubyLearning/tree/main/02.%20Printing)
 
 Além da simples declaração de arrays, é fundamental entender as diferentes formas de imprimir valores na tela em Ruby. A linguagem oferece várias opções, sendo as mais comuns os métodos `puts`, `p`, e `print`.
 
@@ -107,7 +107,7 @@ print "Total de nomes: #{nomes.length}"
 
 <br>
 
-## 03. Trabalhando com Strings em Ruby
+## [03. Trabalhando com Strings](https://github.com/brenonsc/RubyLearning/tree/main/03.%20Strings)
 
 Trabalhar eficientemente com strings é essencial em Ruby, e a linguagem oferece diversas funcionalidades para manipulação de texto. Abaixo estão alguns conceitos importantes:
 
@@ -167,3 +167,63 @@ puts mensagem_sem_vogais
 ```
 
 Lembre-se de que o método `delete` não modifica a string original, ele retorna uma nova string modificada.
+
+## <br>[04. Trabalhando com números](https://github.com/brenonsc/RubyLearning/tree/main/04.%20Numbers)
+
+Ao lidar com números em Ruby, é importante entender alguns conceitos, como divisão de inteiros, multiplicação de strings por números, e o uso dos métodos `times` e `rand`.
+
+### Divisão de Números Inteiros
+
+Ao dividir dois números inteiros em Ruby, o resultado será um número inteiro, a menos que um dos operandos seja convertido para ponto flutuante. Veja um exemplo:
+
+```ruby
+resultado = 7 / 2
+puts resultado
+# Saída: 3
+```
+
+Se você deseja obter um resultado inteiro da divisão, pode usar o método `to_f` em um dos números:
+
+```ruby
+resultado_flutuante = 7 / 2.to_f
+puts resultado_flutuante
+# Saída: 3.5
+```
+
+### Multiplicação de String por Número
+
+Você pode multiplicar uma string por um número para repeti-la várias vezes:
+
+```ruby
+mensagem = "Olá! "
+repeticoes = 3
+mensagem_repetida = mensagem * repeticoes
+puts mensagem_repetida
+# Saída: Olá! Olá! Olá! 
+```
+
+### Método `.times`
+
+O método `.times` é útil para iterar um bloco de código um número específico de vezes:
+
+```ruby
+5.times do
+  puts "Estou iterando!"
+end
+# Saída:
+# Estou iterando!
+# Estou iterando!
+# Estou iterando!
+# Estou iterando!
+# Estou iterando!
+```
+
+### Método `rand`
+
+O método `rand` é usado para gerar números aleatórios. Se fornecido com um argumento, ele retornará um número entre 0 e esse argumento (exclusivo). Se usado sem argumentos, ele retorna um número decimal entre 0 e 1.
+
+```ruby
+# Número aleatório entre 1 e 10
+numero_aleatorio = rand(10) + 1
+puts numero_aleatorio
+```
