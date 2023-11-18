@@ -51,3 +51,57 @@ p numeros
 ```
 
 Lembre-se de que o uso do `reverse!` altera o array original. Se preferir criar uma cópia invertida sem modificar o array original, você pode usar o método `reverse`.
+
+<br>
+
+## 02. Formas de Imprimir Valores em Ruby
+
+Além da simples declaração de arrays, é fundamental entender as diferentes formas de imprimir valores na tela em Ruby. A linguagem oferece várias opções, sendo as mais comuns os métodos `puts`, `p`, e `print`.
+
+### Método `puts`
+
+O método `puts` (abreviação de "put string") é amplamente utilizado para imprimir valores no console em Ruby. Ele adiciona automaticamente uma quebra de linha após cada argumento fornecido, tornando a saída mais legível. Aqui está um exemplo:
+
+```ruby
+nome = "Alice"
+puts "Olá, #{nome}!"
+# Saída: Olá, Alice!
+```
+
+### Método `p`
+
+O método `p` é utilizado para inspecionar e imprimir o valor de uma expressão. Ao contrário do `puts`, o `p` exibe a representação completa e inspecionável do objeto, facilitando a depuração. Exemplo:
+
+```ruby
+idade = 25
+p idade
+# Saída: 25
+```
+
+### Método `print`
+
+O método `print` é semelhante ao `puts`, mas não adiciona automaticamente uma nova linha. Ele imprime os valores fornecidos na mesma linha. Veja um exemplo:
+
+```ruby
+nome = "Bob"
+sobrenome = "Smith"
+print "Nome: #{nome}, Sobrenome: #{sobrenome}"
+# Saída: Nome: Bob, Sobrenome: Smith
+```
+
+### Escolhendo o Método Adequado
+
+A escolha entre `puts`, `p`, e `print` dependerá das necessidades específicas do seu código. Use `puts` quando quiser que cada saída esteja em uma nova linha. Utilize `p` para uma representação detalhada de objetos durante a depuração. E use `print` quando quiser controlar a formatação da saída na mesma linha.
+
+```ruby
+# Exemplo combinando puts, p, e print
+nomes = ["João", "Maria", "Carlos"]
+puts "Nomes:"
+p nomes
+print "Total de nomes: #{nomes.length}"
+# Saída:
+# Nomes:
+# ["João", "Maria", "Carlos"]
+# Total de nomes: 3
+```
+
