@@ -54,7 +54,7 @@ Lembre-se de que o uso do `reverse!` altera o array original. Se preferir criar 
 
 <br>
 
-## 02. Formas de Imprimir Valores em Ruby
+## [02. Formas de Imprimir Valores em Ruby](https://github.com/brenonsc/RubyLearning/tree/main/02.%20Printing)
 
 Além da simples declaração de arrays, é fundamental entender as diferentes formas de imprimir valores na tela em Ruby. A linguagem oferece várias opções, sendo as mais comuns os métodos `puts`, `p`, e `print`.
 
@@ -105,3 +105,65 @@ print "Total de nomes: #{nomes.length}"
 # Total de nomes: 3
 ```
 
+<br>
+
+## 03. Trabalhando com Strings em Ruby
+
+Trabalhar eficientemente com strings é essencial em Ruby, e a linguagem oferece diversas funcionalidades para manipulação de texto. Abaixo estão alguns conceitos importantes:
+
+### Concatenação de Strings
+
+A concatenação é o processo de combinar duas ou mais strings em uma única string. Em Ruby, você pode usar o operador `+` ou o método `concat` para realizar a concatenação:
+
+```ruby
+nome = "John"
+sobrenome = "Doe"
+nome_completo = nome + " " + sobrenome
+# ou
+nome_completo = nome.concat(" ", sobrenome)
+puts nome_completo
+# Saída: John Doe
+```
+
+### Interpolação de Strings
+
+A interpolação de strings permite inserir valores de variáveis diretamente em uma string. Utilize `#{}` para incorporar variáveis em uma string:
+
+```ruby
+idade = 30
+puts "Eu tenho #{idade} anos."
+# Saída: Eu tenho 30 anos.
+```
+
+### Caractere \ para Ignorar Caractere Reservado
+
+Se você precisar incluir um caractere reservado em uma string, pode usar a barra invertida `\` para ignorá-lo. Por exemplo, para incluir aspas duplas dentro de uma string delimitada por aspas duplas:
+
+```ruby
+frase = "Ele disse: \"Olá!\""
+puts frase
+# Saída: Ele disse: "Olá!"
+```
+
+### gets.chomp para Obter Dados do Usuário
+
+Para obter entrada do usuário, você pode usar `gets.chomp`. O `gets` recebe a entrada do usuário, e o `chomp` remove a quebra de linha (\n) no final:
+
+```ruby
+puts "Qual é o seu nome?"
+nome_usuario = gets.chomp
+puts "Olá, #{nome_usuario}!"
+```
+
+### Método `delete` para Remover Caracteres
+
+O método `delete` remove caracteres específicos de uma string. Por exemplo, para remover todas as vogais de uma string:
+
+```ruby
+mensagem = "Olá, mundo!"
+mensagem_sem_vogais = mensagem.delete("aeiou")
+puts mensagem_sem_vogais
+# Saída: l, mnd!
+```
+
+Lembre-se de que o método `delete` não modifica a string original, ele retorna uma nova string modificada.
